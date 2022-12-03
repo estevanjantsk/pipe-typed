@@ -14,27 +14,27 @@ declare module 'pipedrive' {
 		
 		deleteActivities(
 			ids: paths['/activities']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/activities']['delete']['responses']['200']['content']['application/json']>;
 		
 		getActivities(
 			query: paths['/activities']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/activities']['get']['responses']['200']['content']['application/json']>;
 		
 		addActivity(
 			body: paths['/activities']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/activities']['post']['responses']['201']['content']['application/json']>;
 		
 		deleteActivity(
 			id: paths['/activities/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/activities/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getActivity(
 			id: paths['/activities/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/activities/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateActivity(
 			id: paths['/activities/{id}']['put']['parameters']['path']['id'], body: paths['/activities/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/activities/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -43,7 +43,7 @@ declare module 'pipedrive' {
 		
 		getActivityFields(
 			
-		): Promise<void>;
+		): Promise<paths['/activityFields']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -52,23 +52,23 @@ declare module 'pipedrive' {
 		
 		deleteActivityTypes(
 			ids: paths['/activityTypes']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/activityTypes']['delete']['responses']['200']['content']['application/json']>;
 		
 		getActivityTypes(
 			
-		): Promise<void>;
+		): Promise<paths['/activityTypes']['get']['responses']['200']['content']['application/json']>;
 		
 		addActivityType(
 			body: paths['/activityTypes']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/activityTypes']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteActivityType(
 			id: paths['/activityTypes/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/activityTypes/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		updateActivityType(
 			id: paths['/activityTypes/{id}']['put']['parameters']['path']['id'], body: paths['/activityTypes/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/activityTypes/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -77,7 +77,7 @@ declare module 'pipedrive' {
 		
 		getCompanyAddons(
 			
-		): Promise<void>;
+		): Promise<paths['/billing/subscriptions/addons']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -86,23 +86,23 @@ declare module 'pipedrive' {
 		
 		addCallLog(
 			body: paths['/callLogs']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/callLogs']['post']['responses']['200']['content']['application/json']>;
 		
 		getUserCallLogs(
 			query: paths['/callLogs']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/callLogs']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteCallLog(
 			id: paths['/callLogs/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/callLogs/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getCallLog(
 			id: paths['/callLogs/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/callLogs/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		addCallLogAudioFile(
 			id: paths['/callLogs/{id}/recordings']['post']['parameters']['path']['id'], body: paths['/callLogs/{id}/recordings']['post']['requestBody']['content']['multipart/form-data']
-		): Promise<void>;
+		): Promise<paths['/callLogs/{id}/recordings']['post']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -111,19 +111,19 @@ declare module 'pipedrive' {
 		
 		addChannel(
 			body: paths['/channels']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/channels']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteChannel(
 			id: paths['/channels/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/channels/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		receiveMessage(
 			body: paths['/channels/messages/receive']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/channels/messages/receive']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteConversation(
 			channelid: paths['/channels/{channel-id}/conversations/{conversation-id}']['delete']['parameters']['path']['channel-id'], conversationid: paths['/channels/{channel-id}/conversations/{conversation-id}']['delete']['parameters']['path']['conversation-id']
-		): Promise<void>;
+		): Promise<paths['/channels/{channel-id}/conversations/{conversation-id}']['delete']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -132,7 +132,7 @@ declare module 'pipedrive' {
 		
 		getCurrencies(
 			term: paths['/currencies']['get']['parameters']['query']['term']
-		): Promise<void>;
+		): Promise<paths['/currencies']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -141,27 +141,27 @@ declare module 'pipedrive' {
 		
 		getDealFields(
 			query: paths['/dealFields']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/dealFields']['get']['responses']['200']['content']['application/json']>;
 		
 		addDealField(
 			body: paths['/dealFields']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/dealFields']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteDealFields(
 			ids: paths['/dealFields']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/dealFields']['delete']['responses']['200']['content']['application/json']>;
 		
 		getDealField(
 			id: paths['/dealFields/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/dealFields/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteDealField(
 			id: paths['/dealFields/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/dealFields/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		updateDealField(
 			id: paths['/dealFields/{id}']['put']['parameters']['path']['id'], body: paths['/dealFields/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/dealFields/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -170,111 +170,111 @@ declare module 'pipedrive' {
 		
 		getDeals(
 			query: paths['/deals']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals']['get']['responses']['200']['content']['application/json']>;
 		
 		addDeal(
 			body: paths['/deals']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/deals']['post']['responses']['201']['content']['application/json']>;
 		
 		deleteDeals(
 			ids: paths['/deals']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/deals']['delete']['responses']['200']['content']['application/json']>;
 		
 		searchDeals(
 			query: paths['/deals/search']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/search']['get']['responses']['200']['content']['application/json']>;
 		
 		getDealsSummary(
 			query: paths['/deals/summary']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/summary']['get']['responses']['200']['content']['application/json']>;
 		
 		getDealsTimeline(
 			query: paths['/deals/timeline']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/timeline']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteDeal(
 			id: paths['/deals/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getDeal(
 			id: paths['/deals/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateDeal(
 			id: paths['/deals/{id}']['put']['parameters']['path']['id'], body: paths['/deals/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getDealActivities(
 			id: paths['/deals/{id}/activities']['get']['parameters']['path']['id'], query: paths['/deals/{id}/activities']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/activities']['get']['responses']['200']['content']['application/json']>;
 		
 		duplicateDeal(
 			id: paths['/deals/{id}/duplicate']['post']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/duplicate']['post']['responses']['200']['content']['application/json']>;
 		
 		getDealFiles(
 			id: paths['/deals/{id}/files']['get']['parameters']['path']['id'], query: paths['/deals/{id}/files']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/files']['get']['responses']['200']['content']['application/json']>;
 		
 		getDealUpdates(
 			id: paths['/deals/{id}/flow']['get']['parameters']['path']['id'], query: paths['/deals/{id}/flow']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/flow']['get']['responses']['200']['content']['application/json']>;
 		
 		getDealFollowers(
 			id: paths['/deals/{id}/followers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/followers']['get']['responses']['200']['content']['application/json']>;
 		
 		addDealFollower(
 			id: paths['/deals/{id}/followers']['post']['parameters']['path']['id'], body: paths['/deals/{id}/followers']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/followers']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteDealFollower(
 			id: paths['/deals/{id}/followers/{follower_id}']['delete']['parameters']['path']['id'], follower_id: paths['/deals/{id}/followers/{follower_id}']['delete']['parameters']['path']['follower_id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/followers/{follower_id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getDealMailMessages(
 			id: paths['/deals/{id}/mailMessages']['get']['parameters']['path']['id'], query: paths['/deals/{id}/mailMessages']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/mailMessages']['get']['responses']['200']['content']['application/json']>;
 		
 		mergeDeals(
 			id: paths['/deals/{id}/merge']['put']['parameters']['path']['id'], body: paths['/deals/{id}/merge']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/merge']['put']['responses']['200']['content']['application/json']>;
 		
 		getDealParticipants(
 			id: paths['/deals/{id}/participants']['get']['parameters']['path']['id'], query: paths['/deals/{id}/participants']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/participants']['get']['responses']['200']['content']['application/json']>;
 		
 		addDealParticipant(
 			id: paths['/deals/{id}/participants']['post']['parameters']['path']['id'], body: paths['/deals/{id}/participants']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/participants']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteDealParticipant(
 			id: paths['/deals/{id}/participants/{deal_participant_id}']['delete']['parameters']['path']['id'], deal_participant_id: paths['/deals/{id}/participants/{deal_participant_id}']['delete']['parameters']['path']['deal_participant_id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/participants/{deal_participant_id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getDealUsers(
 			id: paths['/deals/{id}/permittedUsers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/permittedUsers']['get']['responses']['200']['content']['application/json']>;
 		
 		getDealPersons(
 			id: paths['/deals/{id}/persons']['get']['parameters']['path']['id'], query: paths['/deals/{id}/persons']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/persons']['get']['responses']['200']['content']['application/json']>;
 		
 		getDealProducts(
 			id: paths['/deals/{id}/products']['get']['parameters']['path']['id'], query: paths['/deals/{id}/products']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/products']['get']['responses']['200']['content']['application/json']>;
 		
 		addDealProduct(
 			id: paths['/deals/{id}/products']['post']['parameters']['path']['id'], body: paths['/deals/{id}/products']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/products']['post']['responses']['200']['content']['application/json']>;
 		
 		updateDealProduct(
 			id: paths['/deals/{id}/products/{product_attachment_id}']['put']['parameters']['path']['id'], product_attachment_id: paths['/deals/{id}/products/{product_attachment_id}']['put']['parameters']['path']['product_attachment_id'], body: paths['/deals/{id}/products/{product_attachment_id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/products/{product_attachment_id}']['put']['responses']['200']['content']['application/json']>;
 		
 		deleteDealProduct(
 			id: paths['/deals/{id}/products/{product_attachment_id}']['delete']['parameters']['path']['id'], product_attachment_id: paths['/deals/{id}/products/{product_attachment_id}']['delete']['parameters']['path']['product_attachment_id']
-		): Promise<void>;
+		): Promise<paths['/deals/{id}/products/{product_attachment_id}']['delete']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -283,35 +283,35 @@ declare module 'pipedrive' {
 		
 		getFiles(
 			query: paths['/files']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/files']['get']['responses']['200']['content']['application/json']>;
 		
 		addFile(
 			body: paths['/files']['post']['requestBody']['content']['multipart/form-data']
-		): Promise<void>;
+		): Promise<paths['/files']['post']['responses']['200']['content']['application/json']>;
 		
 		addFileAndLinkIt(
 			body: paths['/files/remote']['post']['requestBody']['content']['application/x-www-form-urlencoded']
-		): Promise<void>;
+		): Promise<paths['/files/remote']['post']['responses']['200']['content']['application/json']>;
 		
 		linkFileToItem(
 			body: paths['/files/remoteLink']['post']['requestBody']['content']['application/x-www-form-urlencoded']
-		): Promise<void>;
+		): Promise<paths['/files/remoteLink']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteFile(
 			id: paths['/files/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/files/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getFile(
 			id: paths['/files/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/files/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateFile(
 			id: paths['/files/{id}']['put']['parameters']['path']['id'], body: paths['/files/{id}']['put']['requestBody']['content']['application/x-www-form-urlencoded']
-		): Promise<void>;
+		): Promise<paths['/files/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		downloadFile(
 			id: paths['/files/{id}/download']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/files/{id}/download']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -320,31 +320,31 @@ declare module 'pipedrive' {
 		
 		deleteFilters(
 			ids: paths['/filters']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/filters']['delete']['responses']['200']['content']['application/json']>;
 		
 		getFilters(
 			type: paths['/filters']['get']['parameters']['query']['type']
-		): Promise<void>;
+		): Promise<paths['/filters']['get']['responses']['200']['content']['application/json']>;
 		
 		addFilter(
 			body: paths['/filters']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/filters']['post']['responses']['200']['content']['application/json']>;
 		
 		getFilterHelpers(
 			
-		): Promise<void>;
+		): Promise<paths['/filters/helpers']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteFilter(
 			id: paths['/filters/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/filters/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getFilter(
 			id: paths['/filters/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/filters/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateFilter(
 			id: paths['/filters/{id}']['put']['parameters']['path']['id'], body: paths['/filters/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/filters/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -353,23 +353,23 @@ declare module 'pipedrive' {
 		
 		addGoal(
 			body: paths['/goals']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/goals']['post']['responses']['200']['content']['application/json']>;
 		
 		getGoals(
 			query: paths['/goals/find']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/goals/find']['get']['responses']['200']['content']['application/json']>;
 		
 		updateGoal(
 			id: paths['/goals/{id}']['put']['parameters']['path']['id'], body: paths['/goals/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/goals/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		deleteGoal(
 			id: paths['/goals/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/goals/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getGoalResult(
 			id: paths['/goals/{id}/results']['get']['parameters']['path']['id'], query: paths['/goals/{id}/results']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/goals/{id}/results']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -378,11 +378,11 @@ declare module 'pipedrive' {
 		
 		searchItem(
 			query: paths['/itemSearch']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/itemSearch']['get']['responses']['200']['content']['application/json']>;
 		
 		searchItemByField(
 			query: paths['/itemSearch/field']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/itemSearch/field']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -391,19 +391,19 @@ declare module 'pipedrive' {
 		
 		getLeadLabels(
 			
-		): Promise<void>;
+		): Promise<paths['/leadLabels']['get']['responses']['200']['content']['application/json']>;
 		
 		addLeadLabel(
 			body: paths['/leadLabels']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/leadLabels']['post']['responses']['200']['content']['application/json']>;
 		
 		updateLeadLabel(
 			id: paths['/leadLabels/{id}']['patch']['parameters']['path']['id'], body: paths['/leadLabels/{id}']['patch']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/leadLabels/{id}']['patch']['responses']['200']['content']['application/json']>;
 		
 		deleteLeadLabel(
 			id: paths['/leadLabels/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/leadLabels/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -412,7 +412,7 @@ declare module 'pipedrive' {
 		
 		getLeadSources(
 			
-		): Promise<void>;
+		): Promise<paths['/leadSources']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -421,27 +421,27 @@ declare module 'pipedrive' {
 		
 		getLeads(
 			query: paths['/leads']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/leads']['get']['responses']['200']['content']['application/json']>;
 		
 		addLead(
 			body: paths['/leads']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/leads']['post']['responses']['201']['content']['application/json']>;
 		
 		getLead(
 			id: paths['/leads/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/leads/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateLead(
 			id: paths['/leads/{id}']['patch']['parameters']['path']['id'], body: paths['/leads/{id}']['patch']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/leads/{id}']['patch']['responses']['200']['content']['application/json']>;
 		
 		deleteLead(
 			id: paths['/leads/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/leads/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		searchLeads(
 			query: paths['/leads/search']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/leads/search']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -450,35 +450,35 @@ declare module 'pipedrive' {
 		
 		getTeams(
 			query: paths['/legacyTeams']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams']['get']['responses']['200']['content']['application/json']>;
 		
 		addTeam(
 			body: paths['/legacyTeams']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams']['post']['responses']['200']['content']['application/json']>;
 		
 		getTeam(
 			id: paths['/legacyTeams/{id}']['get']['parameters']['path']['id'], query: paths['/legacyTeams/{id}']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateTeam(
 			id: paths['/legacyTeams/{id}']['put']['parameters']['path']['id'], body: paths['/legacyTeams/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getTeamUsers(
 			id: paths['/legacyTeams/{id}/users']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams/{id}/users']['get']['responses']['200']['content']['application/json']>;
 		
 		addTeamUser(
 			id: paths['/legacyTeams/{id}/users']['post']['parameters']['path']['id'], body: paths['/legacyTeams/{id}/users']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams/{id}/users']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteTeamUser(
 			id: paths['/legacyTeams/{id}/users']['delete']['parameters']['path']['id'], body: paths['/legacyTeams/{id}/users']['delete']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams/{id}/users']['delete']['responses']['200']['content']['application/json']>;
 		
 		getUserTeams(
 			id: paths['/legacyTeams/user/{id}']['get']['parameters']['path']['id'], query: paths['/legacyTeams/user/{id}']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/legacyTeams/user/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -487,27 +487,27 @@ declare module 'pipedrive' {
 		
 		getMailMessage(
 			id: paths['/mailbox/mailMessages/{id}']['get']['parameters']['path']['id'], query: paths['/mailbox/mailMessages/{id}']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/mailbox/mailMessages/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		getMailThreads(
 			query: paths['/mailbox/mailThreads']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/mailbox/mailThreads']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteMailThread(
 			id: paths['/mailbox/mailThreads/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/mailbox/mailThreads/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getMailThread(
 			id: paths['/mailbox/mailThreads/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/mailbox/mailThreads/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateMailThreadDetails(
 			id: paths['/mailbox/mailThreads/{id}']['put']['parameters']['path']['id'], body: paths['/mailbox/mailThreads/{id}']['put']['requestBody']['content']['application/x-www-form-urlencoded']
-		): Promise<void>;
+		): Promise<paths['/mailbox/mailThreads/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getMailThreadMessages(
 			id: paths['/mailbox/mailThreads/{id}/mailMessages']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/mailbox/mailThreads/{id}/mailMessages']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -516,7 +516,7 @@ declare module 'pipedrive' {
 		
 		getNoteFields(
 			
-		): Promise<void>;
+		): Promise<paths['/noteFields']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -525,43 +525,43 @@ declare module 'pipedrive' {
 		
 		getNotes(
 			query: paths['/notes']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/notes']['get']['responses']['200']['content']['application/json']>;
 		
 		addNote(
 			body: paths['/notes']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/notes']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteNote(
 			id: paths['/notes/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getNote(
 			id: paths['/notes/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateNote(
 			id: paths['/notes/{id}']['put']['parameters']['path']['id'], body: paths['/notes/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getNoteComments(
 			id: paths['/notes/{id}/comments']['get']['parameters']['path']['id'], query: paths['/notes/{id}/comments']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}/comments']['get']['responses']['200']['content']['application/json']>;
 		
 		addNoteComment(
 			id: paths['/notes/{id}/comments']['post']['parameters']['path']['id'], body: paths['/notes/{id}/comments']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}/comments']['post']['responses']['200']['content']['application/json']>;
 		
 		getComment(
 			id: paths['/notes/{id}/comments/{commentId}']['get']['parameters']['path']['id'], commentId: paths['/notes/{id}/comments/{commentId}']['get']['parameters']['path']['commentId']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}/comments/{commentId}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateCommentForNote(
 			id: paths['/notes/{id}/comments/{commentId}']['put']['parameters']['path']['id'], commentId: paths['/notes/{id}/comments/{commentId}']['put']['parameters']['path']['commentId'], body: paths['/notes/{id}/comments/{commentId}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}/comments/{commentId}']['put']['responses']['200']['content']['application/json']>;
 		
 		deleteComment(
 			id: paths['/notes/{id}/comments/{commentId}']['delete']['parameters']['path']['id'], commentId: paths['/notes/{id}/comments/{commentId}']['delete']['parameters']['path']['commentId']
-		): Promise<void>;
+		): Promise<paths['/notes/{id}/comments/{commentId}']['delete']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -570,27 +570,27 @@ declare module 'pipedrive' {
 		
 		getOrganizationFields(
 			query: paths['/organizationFields']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizationFields']['get']['responses']['200']['content']['application/json']>;
 		
 		addOrganizationField(
 			body: paths['/organizationFields']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizationFields']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteOrganizationFields(
 			ids: paths['/organizationFields']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/organizationFields']['delete']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationField(
 			id: paths['/organizationFields/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/organizationFields/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteOrganizationField(
 			id: paths['/organizationFields/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/organizationFields/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		updateOrganizationField(
 			id: paths['/organizationFields/{id}']['put']['parameters']['path']['id'], body: paths['/organizationFields/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizationFields/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -599,23 +599,23 @@ declare module 'pipedrive' {
 		
 		getOrganizationRelationships(
 			org_id: paths['/organizationRelationships']['get']['parameters']['query']['org_id']
-		): Promise<void>;
+		): Promise<paths['/organizationRelationships']['get']['responses']['200']['content']['application/json']>;
 		
 		addOrganizationRelationship(
 			body: paths['/organizationRelationships']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizationRelationships']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteOrganizationRelationship(
 			id: paths['/organizationRelationships/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/organizationRelationships/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationRelationship(
 			id: paths['/organizationRelationships/{id}']['get']['parameters']['path']['id'], query: paths['/organizationRelationships/{id}']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizationRelationships/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateOrganizationRelationship(
 			id: paths['/organizationRelationships/{id}']['put']['parameters']['path']['id'], body: paths['/organizationRelationships/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizationRelationships/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -624,75 +624,75 @@ declare module 'pipedrive' {
 		
 		deleteOrganizations(
 			ids: paths['/organizations']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/organizations']['delete']['responses']['200']['content']['application/json']>;
 		
 		getOrganizations(
 			query: paths['/organizations']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations']['get']['responses']['200']['content']['application/json']>;
 		
 		addOrganization(
 			body: paths['/organizations']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizations']['post']['responses']['201']['content']['application/json']>;
 		
 		searchOrganization(
 			query: paths['/organizations/search']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations/search']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteOrganization(
 			id: paths['/organizations/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getOrganization(
 			id: paths['/organizations/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateOrganization(
 			id: paths['/organizations/{id}']['put']['parameters']['path']['id'], body: paths['/organizations/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationActivities(
 			id: paths['/organizations/{id}/activities']['get']['parameters']['path']['id'], query: paths['/organizations/{id}/activities']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/activities']['get']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationDeals(
 			id: paths['/organizations/{id}/deals']['get']['parameters']['path']['id'], query: paths['/organizations/{id}/deals']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/deals']['get']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationFiles(
 			id: paths['/organizations/{id}/files']['get']['parameters']['path']['id'], query: paths['/organizations/{id}/files']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/files']['get']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationUpdates(
 			id: paths['/organizations/{id}/flow']['get']['parameters']['path']['id'], query: paths['/organizations/{id}/flow']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/flow']['get']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationFollowers(
 			id: paths['/organizations/{id}/followers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/followers']['get']['responses']['200']['content']['application/json']>;
 		
 		addOrganizationFollower(
 			id: paths['/organizations/{id}/followers']['post']['parameters']['path']['id'], body: paths['/organizations/{id}/followers']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/followers']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteOrganizationFollower(
 			id: paths['/organizations/{id}/followers/{follower_id}']['delete']['parameters']['path']['id'], follower_id: paths['/organizations/{id}/followers/{follower_id}']['delete']['parameters']['path']['follower_id']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/followers/{follower_id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationMailMessages(
 			id: paths['/organizations/{id}/mailMessages']['get']['parameters']['path']['id'], query: paths['/organizations/{id}/mailMessages']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/mailMessages']['get']['responses']['200']['content']['application/json']>;
 		
 		mergeOrganizations(
 			id: paths['/organizations/{id}/merge']['put']['parameters']['path']['id'], body: paths['/organizations/{id}/merge']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/merge']['put']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationUsers(
 			id: paths['/organizations/{id}/permittedUsers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/permittedUsers']['get']['responses']['200']['content']['application/json']>;
 		
 		getOrganizationPersons(
 			id: paths['/organizations/{id}/persons']['get']['parameters']['path']['id'], query: paths['/organizations/{id}/persons']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/organizations/{id}/persons']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -701,15 +701,15 @@ declare module 'pipedrive' {
 		
 		getPermissionSets(
 			app: paths['/permissionSets']['get']['parameters']['query']['app']
-		): Promise<void>;
+		): Promise<paths['/permissionSets']['get']['responses']['200']['content']['application/json']>;
 		
 		getPermissionSet(
 			id: paths['/permissionSets/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/permissionSets/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		getPermissionSetAssignments(
 			id: paths['/permissionSets/{id}/assignments']['get']['parameters']['path']['id'], query: paths['/permissionSets/{id}/assignments']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/permissionSets/{id}/assignments']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -718,27 +718,27 @@ declare module 'pipedrive' {
 		
 		getPersonFields(
 			query: paths['/personFields']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/personFields']['get']['responses']['200']['content']['application/json']>;
 		
 		addPersonField(
 			body: paths['/personFields']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/personFields']['post']['responses']['200']['content']['application/json']>;
 		
 		deletePersonFields(
 			ids: paths['/personFields']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/personFields']['delete']['responses']['200']['content']['application/json']>;
 		
 		getPersonField(
 			id: paths['/personFields/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/personFields/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		deletePersonField(
 			id: paths['/personFields/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/personFields/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		updatePersonField(
 			id: paths['/personFields/{id}']['put']['parameters']['path']['id'], body: paths['/personFields/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/personFields/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -747,83 +747,83 @@ declare module 'pipedrive' {
 		
 		deletePersons(
 			ids: paths['/persons']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/persons']['delete']['responses']['200']['content']['application/json']>;
 		
 		getPersons(
 			query: paths['/persons']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons']['get']['responses']['200']['content']['application/json']>;
 		
 		addPerson(
 			body: paths['/persons']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/persons']['post']['responses']['201']['content']['application/json']>;
 		
 		searchPersons(
 			query: paths['/persons/search']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons/search']['get']['responses']['200']['content']['application/json']>;
 		
 		deletePerson(
 			id: paths['/persons/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getPerson(
 			id: paths['/persons/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updatePerson(
 			id: paths['/persons/{id}']['put']['parameters']['path']['id'], body: paths['/persons/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getPersonActivities(
 			id: paths['/persons/{id}/activities']['get']['parameters']['path']['id'], query: paths['/persons/{id}/activities']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/activities']['get']['responses']['200']['content']['application/json']>;
 		
 		getPersonDeals(
 			id: paths['/persons/{id}/deals']['get']['parameters']['path']['id'], query: paths['/persons/{id}/deals']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/deals']['get']['responses']['200']['content']['application/json']>;
 		
 		getPersonFiles(
 			id: paths['/persons/{id}/files']['get']['parameters']['path']['id'], query: paths['/persons/{id}/files']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/files']['get']['responses']['200']['content']['application/json']>;
 		
 		getPersonUpdates(
 			id: paths['/persons/{id}/flow']['get']['parameters']['path']['id'], query: paths['/persons/{id}/flow']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/flow']['get']['responses']['200']['content']['application/json']>;
 		
 		getPersonFollowers(
 			id: paths['/persons/{id}/followers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/followers']['get']['responses']['200']['content']['application/json']>;
 		
 		addPersonFollower(
 			id: paths['/persons/{id}/followers']['post']['parameters']['path']['id'], body: paths['/persons/{id}/followers']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/followers']['post']['responses']['200']['content']['application/json']>;
 		
 		deletePersonFollower(
 			id: paths['/persons/{id}/followers/{follower_id}']['delete']['parameters']['path']['id'], follower_id: paths['/persons/{id}/followers/{follower_id}']['delete']['parameters']['path']['follower_id']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/followers/{follower_id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getPersonMailMessages(
 			id: paths['/persons/{id}/mailMessages']['get']['parameters']['path']['id'], query: paths['/persons/{id}/mailMessages']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/mailMessages']['get']['responses']['200']['content']['application/json']>;
 		
 		mergePersons(
 			id: paths['/persons/{id}/merge']['put']['parameters']['path']['id'], body: paths['/persons/{id}/merge']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/merge']['put']['responses']['200']['content']['application/json']>;
 		
 		getPersonUsers(
 			id: paths['/persons/{id}/permittedUsers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/permittedUsers']['get']['responses']['200']['content']['application/json']>;
 		
 		deletePersonPicture(
 			id: paths['/persons/{id}/picture']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/picture']['delete']['responses']['200']['content']['application/json']>;
 		
 		addPersonPicture(
 			id: paths['/persons/{id}/picture']['post']['parameters']['path']['id'], body: paths['/persons/{id}/picture']['post']['requestBody']['content']['multipart/form-data']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/picture']['post']['responses']['200']['content']['application/json']>;
 		
 		getPersonProducts(
 			id: paths['/persons/{id}/products']['get']['parameters']['path']['id'], query: paths['/persons/{id}/products']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/persons/{id}/products']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -832,35 +832,35 @@ declare module 'pipedrive' {
 		
 		getPipelines(
 			
-		): Promise<void>;
+		): Promise<paths['/pipelines']['get']['responses']['200']['content']['application/json']>;
 		
 		addPipeline(
 			body: paths['/pipelines']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/pipelines']['post']['responses']['200']['content']['application/json']>;
 		
 		deletePipeline(
 			id: paths['/pipelines/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/pipelines/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getPipeline(
 			id: paths['/pipelines/{id}']['get']['parameters']['path']['id'], query: paths['/pipelines/{id}']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/pipelines/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updatePipeline(
 			id: paths['/pipelines/{id}']['put']['parameters']['path']['id'], body: paths['/pipelines/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/pipelines/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getPipelineConversionStatistics(
 			id: paths['/pipelines/{id}/conversion_statistics']['get']['parameters']['path']['id'], query: paths['/pipelines/{id}/conversion_statistics']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/pipelines/{id}/conversion_statistics']['get']['responses']['200']['content']['application/json']>;
 		
 		getPipelineDeals(
 			id: paths['/pipelines/{id}/deals']['get']['parameters']['path']['id'], query: paths['/pipelines/{id}/deals']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/pipelines/{id}/deals']['get']['responses']['200']['content']['application/json']>;
 		
 		getPipelineMovementStatistics(
 			id: paths['/pipelines/{id}/movement_statistics']['get']['parameters']['path']['id'], query: paths['/pipelines/{id}/movement_statistics']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/pipelines/{id}/movement_statistics']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -869,27 +869,27 @@ declare module 'pipedrive' {
 		
 		deleteProductFields(
 			ids: paths['/productFields']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/productFields']['delete']['responses']['200']['content']['application/json']>;
 		
 		getProductFields(
 			query: paths['/productFields']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/productFields']['get']['responses']['200']['content']['application/json']>;
 		
 		addProductField(
 			body: paths['/productFields']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/productFields']['post']['responses']['201']['content']['application/json']>;
 		
 		deleteProductField(
 			id: paths['/productFields/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/productFields/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getProductField(
 			id: paths['/productFields/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/productFields/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateProductField(
 			id: paths['/productFields/{id}']['put']['parameters']['path']['id'], body: paths['/productFields/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/productFields/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -898,51 +898,51 @@ declare module 'pipedrive' {
 		
 		getProducts(
 			query: paths['/products']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/products']['get']['responses']['200']['content']['application/json']>;
 		
 		addProduct(
 			body: paths['/products']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/products']['post']['responses']['201']['content']['application/json']>;
 		
 		searchProducts(
 			query: paths['/products/search']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/products/search']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteProduct(
 			id: paths['/products/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/products/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getProduct(
 			id: paths['/products/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/products/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateProduct(
 			id: paths['/products/{id}']['put']['parameters']['path']['id'], body: paths['/products/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/products/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getProductDeals(
 			id: paths['/products/{id}/deals']['get']['parameters']['path']['id'], query: paths['/products/{id}/deals']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/products/{id}/deals']['get']['responses']['200']['content']['application/json']>;
 		
 		getProductFiles(
 			id: paths['/products/{id}/files']['get']['parameters']['path']['id'], query: paths['/products/{id}/files']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/products/{id}/files']['get']['responses']['200']['content']['application/json']>;
 		
 		getProductFollowers(
 			id: paths['/products/{id}/followers']['get']['parameters']['path']['id'], query: paths['/products/{id}/followers']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/products/{id}/followers']['get']['responses']['200']['content']['application/json']>;
 		
 		addProductFollower(
 			id: paths['/products/{id}/followers']['post']['parameters']['path']['id'], body: paths['/products/{id}/followers']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/products/{id}/followers']['post']['responses']['201']['content']['application/json']>;
 		
 		deleteProductFollower(
 			id: paths['/products/{id}/followers/{follower_id}']['delete']['parameters']['path']['id'], follower_id: paths['/products/{id}/followers/{follower_id}']['delete']['parameters']['path']['follower_id']
-		): Promise<void>;
+		): Promise<paths['/products/{id}/followers/{follower_id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getProductUsers(
 			id: paths['/products/{id}/permittedUsers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/products/{id}/permittedUsers']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -951,7 +951,7 @@ declare module 'pipedrive' {
 		
 		getRecents(
 			query: paths['/recents']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/recents']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -960,47 +960,47 @@ declare module 'pipedrive' {
 		
 		getRoles(
 			query: paths['/roles']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/roles']['get']['responses']['200']['content']['application/json']>;
 		
 		addRole(
 			body: paths['/roles']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/roles']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteRole(
 			id: paths['/roles/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getRole(
 			id: paths['/roles/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateRole(
 			id: paths['/roles/{id}']['put']['parameters']['path']['id'], body: paths['/roles/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		deleteRoleAssignment(
 			id: paths['/roles/{id}/assignments']['delete']['parameters']['path']['id'], body: paths['/roles/{id}/assignments']['delete']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}/assignments']['delete']['responses']['200']['content']['application/json']>;
 		
 		getRoleAssignments(
 			id: paths['/roles/{id}/assignments']['get']['parameters']['path']['id'], query: paths['/roles/{id}/assignments']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}/assignments']['get']['responses']['200']['content']['application/json']>;
 		
 		addRoleAssignment(
 			id: paths['/roles/{id}/assignments']['post']['parameters']['path']['id'], body: paths['/roles/{id}/assignments']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}/assignments']['post']['responses']['200']['content']['application/json']>;
 		
 		getRoleSubRoles(
 			id: paths['/roles/{id}/roles']['get']['parameters']['path']['id'], query: paths['/roles/{id}/roles']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}/roles']['get']['responses']['200']['content']['application/json']>;
 		
 		getRoleSettings(
 			id: paths['/roles/{id}/settings']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}/settings']['get']['responses']['200']['content']['application/json']>;
 		
 		addOrUpdateRoleSetting(
 			id: paths['/roles/{id}/settings']['post']['parameters']['path']['id'], body: paths['/roles/{id}/settings']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/roles/{id}/settings']['post']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -1009,31 +1009,31 @@ declare module 'pipedrive' {
 		
 		deleteStages(
 			ids: paths['/stages']['delete']['parameters']['query']['ids']
-		): Promise<void>;
+		): Promise<paths['/stages']['delete']['responses']['200']['content']['application/json']>;
 		
 		getStages(
 			pipeline_id: paths['/stages']['get']['parameters']['query']['pipeline_id']
-		): Promise<void>;
+		): Promise<paths['/stages']['get']['responses']['200']['content']['application/json']>;
 		
 		addStage(
 			body: paths['/stages']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/stages']['post']['responses']['200']['content']['application/json']>;
 		
 		deleteStage(
 			id: paths['/stages/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/stages/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		getStage(
 			id: paths['/stages/{id}']['get']['parameters']['path']['id'], query: paths['/stages/{id}']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/stages/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateStage(
 			id: paths['/stages/{id}']['put']['parameters']['path']['id'], body: paths['/stages/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/stages/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getStageDeals(
 			id: paths['/stages/{id}/deals']['get']['parameters']['path']['id'], query: paths['/stages/{id}/deals']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/stages/{id}/deals']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -1042,39 +1042,39 @@ declare module 'pipedrive' {
 		
 		getSubscription(
 			id: paths['/subscriptions/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		deleteSubscription(
 			id: paths['/subscriptions/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 		findSubscriptionByDeal(
 			dealId: paths['/subscriptions/find/{dealId}']['get']['parameters']['path']['dealId']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/find/{dealId}']['get']['responses']['200']['content']['application/json']>;
 		
 		getSubscriptionPayments(
 			id: paths['/subscriptions/{id}/payments']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/{id}/payments']['get']['responses']['200']['content']['application/json']>;
 		
 		addRecurringSubscription(
 			body: paths['/subscriptions/recurring']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/recurring']['post']['responses']['200']['content']['application/json']>;
 		
 		addSubscriptionInstallment(
 			body: paths['/subscriptions/installment']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/installment']['post']['responses']['200']['content']['application/json']>;
 		
 		updateRecurringSubscription(
 			id: paths['/subscriptions/recurring/{id}']['put']['parameters']['path']['id'], body: paths['/subscriptions/recurring/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/recurring/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		updateSubscriptionInstallment(
 			id: paths['/subscriptions/installment/{id}']['put']['parameters']['path']['id'], body: paths['/subscriptions/installment/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/installment/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		cancelRecurringSubscription(
 			id: paths['/subscriptions/recurring/{id}/cancel']['put']['parameters']['path']['id'], body: paths['/subscriptions/recurring/{id}/cancel']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/subscriptions/recurring/{id}/cancel']['put']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -1083,7 +1083,7 @@ declare module 'pipedrive' {
 		
 		getUserConnections(
 			
-		): Promise<void>;
+		): Promise<paths['/userConnections']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -1092,7 +1092,7 @@ declare module 'pipedrive' {
 		
 		getUserSettings(
 			
-		): Promise<void>;
+		): Promise<paths['/userSettings']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -1101,43 +1101,43 @@ declare module 'pipedrive' {
 		
 		getUsers(
 			
-		): Promise<void>;
+		): Promise<paths['/users']['get']['responses']['200']['content']['application/json']>;
 		
 		addUser(
 			body: paths['/users']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/users']['post']['responses']['200']['content']['application/json']>;
 		
 		findUsersByName(
 			query: paths['/users/find']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/users/find']['get']['responses']['200']['content']['application/json']>;
 		
 		getCurrentUser(
 			
-		): Promise<void>;
+		): Promise<paths['/users/me']['get']['responses']['200']['content']['application/json']>;
 		
 		getUser(
 			id: paths['/users/{id}']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/users/{id}']['get']['responses']['200']['content']['application/json']>;
 		
 		updateUser(
 			id: paths['/users/{id}']['put']['parameters']['path']['id'], body: paths['/users/{id}']['put']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/users/{id}']['put']['responses']['200']['content']['application/json']>;
 		
 		getUserFollowers(
 			id: paths['/users/{id}/followers']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/users/{id}/followers']['get']['responses']['200']['content']['application/json']>;
 		
 		getUserPermissions(
 			id: paths['/users/{id}/permissions']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/users/{id}/permissions']['get']['responses']['200']['content']['application/json']>;
 		
 		getUserRoleAssignments(
 			id: paths['/users/{id}/roleAssignments']['get']['parameters']['path']['id'], query: paths['/users/{id}/roleAssignments']['get']['parameters']['query']
-		): Promise<void>;
+		): Promise<paths['/users/{id}/roleAssignments']['get']['responses']['200']['content']['application/json']>;
 		
 		getUserRoleSettings(
 			id: paths['/users/{id}/roleSettings']['get']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/users/{id}/roleSettings']['get']['responses']['200']['content']['application/json']>;
 		
 	}
 
@@ -1146,15 +1146,15 @@ declare module 'pipedrive' {
 		
 		getWebhooks(
 			
-		): Promise<void>;
+		): Promise<paths['/webhooks']['get']['responses']['200']['content']['application/json']>;
 		
 		addWebhook(
 			body: paths['/webhooks']['post']['requestBody']['content']['application/json']
-		): Promise<void>;
+		): Promise<paths['/webhooks']['post']['responses']['201']['content']['application/json']>;
 		
 		deleteWebhook(
 			id: paths['/webhooks/{id}']['delete']['parameters']['path']['id']
-		): Promise<void>;
+		): Promise<paths['/webhooks/{id}']['delete']['responses']['200']['content']['application/json']>;
 		
 	}
 

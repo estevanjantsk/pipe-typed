@@ -61,6 +61,31 @@ const generateParams = (path, method, content) => {
 	return params.join(', ');
 }
 
+const generateResponses = (path, method, content) => {
+	const success: Array<string> = [];
+	// const error: Array<string> = [];
+
+	Object.entries(content.responses).forEach(([code, _responseContent]) => {
+		// success
+		if(code.startsWith('2')) {
+			success.push(`paths['${path}']['${method}']['responses']['${code}']['content']['application/json']`)
+		} 
+		// else { // error
+			// error.push(`paths['${path}']['${method}']['responses']['${code}']['content']['application/json']`)
+		// }
+	})
+
+	// if(success.length >= 1 && error.length >= 1) {
+	// 	return `${success.join(' | ')}, ${error.join(' | ')}`;
+	// }
+
+	if(success.length >= 1) {
+		return `${success.join(' | ')}`;
+	}
+
+	return 'void';
+} 
+
 const generateInterfaces = () => {
 	const filePath = path.join(__dirname, 'pipedrive.ts')
 	const file = fs.readFileSync(filePath, 'utf8');
@@ -81,7 +106,7 @@ const generateMethods = (tag: string) => {
 		methods += `
 		${operationId}(
 			${generateParams(path, method, content)}
-		): Promise<void>;
+		): Promise<${generateResponses(path, method, content)}>;
 		`
 	})
 
