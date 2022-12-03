@@ -137,11 +137,43 @@ const init = () => {
 declare module 'pipedrive' {
 
 	export class ApiClient {
-		authentications: any;
+		public basePath: string;
+		public authentications: Authentications;
+		public authorize(code: string): Promise<Tokens>;
+		public updateToken(tokens: Tokens): void;
+		public refreshToken(): Promise<Tokens>;
+		public shouldRefreshToken(): boolean;
+		public isApiTokenSet(): boolean;
+		public isOauth2Supported(): boolean;
+		public buildAuthorizationUrl(): string;
 	}
 
 	type ApiClientInstance = ApiClient;
 	${generateClasses()}
+}
+
+interface Authentications {
+	oauth2: OAuth2;
+}
+
+interface OAuth2 {
+	clientId: string;
+	clientSecret: string;
+	redirectUri: string;
+	host: string;
+	accessToken: string;
+	refreshToken: string;
+}
+
+interface Tokens {
+	/* eslint-disable camelcase */
+	token_type: string;
+	access_token: string;
+	refresh_token: string;
+	scope: string;
+	expires_in: number;
+	api_domain: string;
+	/* eslint-enable camelcase */
 }
 	
 	${generateInterfaces()}
